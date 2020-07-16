@@ -1,0 +1,27 @@
+div#logo-container {
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+img#logo {
+    width: 35vw;
+    height: auto;
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+    -moz-animation: fadein 5s; /* Firefox */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+    -o-animation: fadein 5s; /* Opera */
+    animation: fadein 5s;
+}
+
+@media (min-width: 400px) {
+    img#logo {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    img#logo {
+        width: 30vw;
+    }
+}

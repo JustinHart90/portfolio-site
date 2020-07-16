@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Image, Container, Row, Col } from 'react-bootstrap';
+import './MessageBlock.css';
 
-export class IconBlock extends Component {
-  static displayName = IconBlock.name;
+export class MessageBlock extends Component {
+  static displayName = MessageBlock.name;
 
   render () {
     return (
@@ -10,21 +11,21 @@ export class IconBlock extends Component {
             <p id="name">Justin Hart</p>
             <p id="role">Full Stack Web Developer</p>
             <Container>
-                <Row>
-                    <Col xs={1} md={2}>
-                        <Image src="images/resume.png" />
+                <Row id='icon-row'>
+                    <Col xs={2} md={2}>
+                        <Image id='resume-image' className='icon-image' src="images/resume.png" />
                     </Col>
-                    <Col xs={1} md={2}>
-                        <Image src="images/github.png" />
+                    <Col xs={2} md={2}>
+                        <Image id='github-image' className='icon-image' src="images/github.png" />
                     </Col>
-                    <Col xs={1} md={2}>
-                        <Image src="images/mail.png" />
+                    <Col xs={2} md={2}>
+                        <Image id='email-image' className='icon-image' src="images/mail.png" />
                     </Col>
-                    <Col xs={1} md={2}>
-                        <Image src="images/linkedin.png" />
+                    <Col xs={2} md={2}>
+                        <Image id='linkedin-image' className='icon-image' src="images/linkedin.png" />
                     </Col>
-                    <Col xs={1} md={2}>
-                        <Image src="images/phone.png" />
+                    <Col xs={2} md={2}>
+                        <Image id='phone-image' className='icon-image' src="images/phone.png" />
                     </Col>
                 </Row>
             </Container>

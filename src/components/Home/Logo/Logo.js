@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Logo.css';
 
 export class Logo extends Component {
   static displayName = Logo.name;

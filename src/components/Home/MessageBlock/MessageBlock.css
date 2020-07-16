@@ -1,0 +1,71 @@
+div#message-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#name {
+    font-size: 2.5rem;
+    font-family: 'Anonymous Pro', 'Poiret One', cursive, sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+#role {
+    font-size: 1.5em;
+    color: rgb(175, 88, 89);
+    text-align: center;
+    -webkit-animation: fadein 12s; /* Safari and Chrome */
+    -moz-animation: fadein 12s; /* Firefox */
+    -ms-animation: fadein 12s; /* Internet Explorer */
+    -o-animation: fadein 12s; /* Opera */
+    animation: fadein 12s;
+}
+
+.col-1 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* animate icon block */
+img.icon-image {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    height: 2.5rem;
+    width: auto;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: scale(0.4);
+	transform: scale(0.4);
+	-webkit-animation: popUp .6s ease-in forwards;
+	animation: popUp .6s ease-in forwards;
+    animation-fill-mode: both;
+}
+
+#github-image.icon-image {
+    background-color: #ffffff;
+}
+
+#resume-image.icon-image { animation-delay: 2s }
+#github-image.icon-image { animation-delay: 2.25s }
+#email-image.icon-image { animation-delay: 2.5s }
+#linkedin-image.icon-image { animation-delay: 2.75s }
+#phone-image.icon-image { animation-delay: 3s }

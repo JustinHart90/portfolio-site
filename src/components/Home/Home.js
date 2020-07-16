@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import { IconBlock } from './IconBlock';
-import { Logo } from './Logo';
-import './Home.css';
+import { MessageBlock } from './MessageBlock/MessageBlock';
+import { Logo } from './Logo/Logo';
+import './Keyframes.css';
 
 export class Home extends Component {
   static displayName = Home.name;
 
   render () {
     return (
-      <div id="top-section">
+      <div>
         <Logo/>
-        <IconBlock/>
+        <MessageBlock/>
       </div>
     );
   }

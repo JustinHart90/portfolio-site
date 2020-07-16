@@ -13,13 +13,13 @@ const NavMenu = () => {
           <NavbarBrand></NavbarBrand>
             <ul className="navbar-nav flex-grow">
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Home</NavLink>
+                  <NavLink tag={Link} className="text-light" to="/">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Projects</NavLink>
+                  <NavLink tag={Link} className="text-light" to="/">Projects</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/">Education</NavLink>
+                  <NavLink tag={Link} className="text-light" to="/">Education</NavLink>
                 </NavItem>
             </ul>
         </Container>
