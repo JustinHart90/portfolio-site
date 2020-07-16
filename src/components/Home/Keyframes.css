@@ -5,9 +5,9 @@
 /* fadein */
 /* popUp */
 
-@keyframes typewriter{
-    from{width: 0;}
-    to{width: 24em;}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }
 
 @keyframes blinkTextCursor{
@@ -47,6 +47,6 @@
 
 @keyframes popUp {
 	0% { }
-	70% { -webkit-transform: scale(1.1); transform: scale(1.1); opacity: .8; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; }
+	70% { -webkit-transform: scale(1.1); transform: scale(1.1); opacity: .8; -webkit-animation-timing-function: ease-out; }
 	100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
 }
