@@ -1,0 +1,8 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #00B7FF;
+}
+
+body {
+  font: 14px 'Roboto', sans-serif, 'Lucida Grande', Helvetica, Arial;
+}

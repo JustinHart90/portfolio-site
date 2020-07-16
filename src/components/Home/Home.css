@@ -1,0 +1,44 @@
+div#logo-container {
+    margin-bottom: 10%;
+}
+
+img#logo {
+    width: 35vw;
+    height: auto;
+    -webkit-animation: fadein 5s; /* Safari and Chrome */
+    -moz-animation: fadein 5s; /* Firefox */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+    -o-animation: fadein 5s; /* Opera */
+    animation: fadein 5s;
+}
+
+#role {
+    -webkit-animation: fadein 12s; /* Safari and Chrome */
+    -moz-animation: fadein 12s; /* Firefox */
+    -ms-animation: fadein 12s; /* Internet Explorer */
+    -o-animation: fadein 12s; /* Opera */
+    animation: fadein 12s;
+}
+  
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
