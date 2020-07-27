@@ -1,0 +1,45 @@
+{
+    "ProjectNames": ["Coinsight", "MicroLens", "Shook", "HQ"],
+    "ProjectData": [
+        {
+            "title": "Coinsight",
+            "techStack": "ES6, D3.js, AngularJS, Webpack, Babel, Service Workers, IBM Watson, Node.js, Express, PostgreSQL, Knex, HTML5, CSS3, Bootstrap",
+            "description": "A cryptocurrency dashboard, simplified. Coinsight is a Progressive Web Application that generates real time public sentiment analysis to provide insights into how the price of cryptocurrencies change according to public perception.",
+            "logo": "images/projects/coinsight.png",
+            "images": [
+                "images/projects/coin-mock.png",
+                "images/projects/coin-mock-2.png",
+                "images/projects/coin-mock-3.jpg"
+            ]
+        },
+        {
+            "title": "MicroLens",
+            "techStack": "AngularJS, D3.js, ES6, AWS EC2/S3, HTML5 File API, Node.js, Express, PostgreSQL, Knex, CSS3, Bootstrap",
+            "description": "MicroLens is a consumer-facing food tracker, that allows you to track the food you eat based upon Micro/Macro nutrients compared to your Daily Recommended Intake. Using MicroLens you can easily identify gaps in your nutrition and get whole nutrient comparison to improve your diet. You will be able to view a daily graph of your personal micro and macro nutrients compared to the DRI values.",
+            "logo": "images/projects/mycro-logo.png",
+            "images": [
+                "images/projects/mycro-screenshot.png"
+            ]
+        },
+        {
+            "title": "Shook",
+            "techStack": "Javascript, Node, Express, PostgreSQL, AWS, CSS, Bootstrap, Handlebars, HTML, Knex",
+            "description": "SHOOK is a social betting app that turns life's everyday events into bet-able moments and ensures neither party has a “conveniently” poor memory when the bet comes due. You can challenge friends directly on the website or on Twitter using #SHOOK and the Shook-bot will take care of the rest.",
+            "logo": "images/projects/shook-logo.png",
+            "images": [
+                "images/projects/shook.png",
+                "images/projects/shook2.jpg"
+            ]
+        },
+        {
+            "title": "HQ",
+            "techStack": "CSS, HTML, Javascript, jQuery, JSON",
+            "description": "This Google Chrome extension loads a custom home page populated with recent and trending news, a note pad, the current date and outside temperature, and access to a calculator, random joke generator and a meme generator.",
+            "logo": "images/projects/hq-logo.png",
+            "images": [
+                "images/projects/hq.jpg",
+                "images/projects/hq2.png"
+            ]
+        }
+    ]
+}

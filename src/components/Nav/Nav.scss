@@ -39,6 +39,9 @@ header {
         padding-right: .75rem;
         padding-left: .75rem;
     }
+    .navbar {
+        margin-bottom: 1rem !important;
+    }
 }
 
 @include media(">=phone", "<=phone-lg") {
@@ -46,6 +49,9 @@ header {
         font-size: 0.75rem;
         padding-right: .75rem;
         padding-left: .75rem;
+    }
+    .navbar {
+        margin-bottom: 1rem !important;
     }
 }
 

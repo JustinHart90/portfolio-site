@@ -7,34 +7,24 @@ export default class ProjectsNav extends Component {
         return (
             <Card>
                 <Card.Header>
-                    <Nav variant="tabs" defaultActiveKey="#first">
-                    <Nav.Item>
-                        <Nav.Link href="#first">
-                            Coinsight
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="#link">
-                            MicroNutra
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="#disabled">
-                            Shook
-                        </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href="#disabled">
-                            HQ
-                        </Nav.Link>
-                    </Nav.Item>
+                    <Nav variant="tabs" defaultActiveKey={`#${this.props.data["ProjectNames"][0]}`}>
+                        {this.props.data["ProjectNames"].map(projectName => (
+                        <Nav.Item key={`#${projectName}`}>
+                            <Nav.Link href={`#${projectName}`}>
+                                {projectName}
+                            </Nav.Link>
+                        </Nav.Item>
+                        ))}
                     </Nav>
                 </Card.Header>
                 <Card.Body>
                     <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
+                        {this.props.data["ProjectData"][0]["description"]}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Card.Text>
+                        {this.props.data["ProjectData"][0]["techStack"]}
+                    </Card.Text>
+                    <Button variant="primary">View GitHub</Button>
                 </Card.Body>
             </Card>
         )
