@@ -1,0 +1,67 @@
+@import '../../../styles/include-media';
+
+div#message-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#name {
+    font-size: 2.25rem;
+    font-family: 'Anonymous Pro', 'Poiret One', cursive, sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#role {
+    font-size: 1.5em;
+    color: rgb(175, 88, 89);
+    text-align: center;
+}
+
+.col-1 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row {
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+img.icon-image {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    width: 2.25rem;
+    height: auto;
+    max-height: 300px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#github-image.icon-image {
+    background-color: #ffffff;
+}
+
+@include media(">=phone-sm", "<=phone-lg") {
+    #name {
+        font-size: 1.15rem;
+    }
+    #role {
+        font-size: 1.15rem;
+    }
+    img.icon-image {
+        width: 2rem;
+        height: auto;
+        max-height: 200px !important;
+    }
+}

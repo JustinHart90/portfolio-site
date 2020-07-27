@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import ReactGA from 'react-ga';
 import IconRow from '../IconRow/IconRow';
 
-export class Education extends Component {
-  static displayName = Education.name;
+export class Projects extends Component {
+  static displayName = Projects.name;
 
   render () {
     ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
-    console.log(`EDUCATION: ${window.location.pathname}`);
+    console.log(`PROJECTS: ${window.location.pathname}`);
 
     return (
       <div>
-        Education
+        Projects
         <IconRow />
       </div>
     );

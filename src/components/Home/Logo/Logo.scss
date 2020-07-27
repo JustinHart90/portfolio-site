@@ -1,3 +1,5 @@
+@import '../../../styles/include-media';
+
 div#logo-container {
     margin-bottom: 10%;
     display: flex;
@@ -5,7 +7,7 @@ div#logo-container {
 }
 
 img#logo {
-    width: 35vw;
+    width: 40%;
     height: auto;
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -moz-animation: fadein 2s; /* Firefox */
@@ -14,23 +16,18 @@ img#logo {
     animation: fadein 2s;
 }
 
-@media (min-width: 375px) {
+@include media(">=phone-sm", "<=phone-lg") {
     img#logo {
-        width: 200px;
-        height: 88.43px;
+        width: 50%;
+        height: auto;
+        max-height: 100px;
     }
 }
 
-@media (min-width: 420px) {
+@include media(">desktop", "<=3000px") {
     img#logo {
-        width: 40vw;
+        width: 30%;
         height: auto;
-    }
-}
-
-@media (min-width: 1200px) {
-    img#logo {
-        width: 30vw;
-        height: auto;
+        max-height: 150px;
     }
 }

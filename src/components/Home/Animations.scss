@@ -1,0 +1,30 @@
+#name {
+    -webkit-animation: typing 2s steps(44, end), blinkTextCursor 750ms steps(44) infinite normal; /* Safari and Chrome */
+    -moz-animation: typing 2s steps(44, end), blinkTextCursor 750ms steps(44) infinite normal; /* Firefox */
+    -ms-animation: typing 2s steps(44, end), blinkTextCursor 750ms steps(44) infinite normal; /* Internet Explorer */
+    -o-animation: typing 2s steps(44, end), blinkTextCursor 750ms steps(44) infinite normal; /* Opera */
+    animation: typing 2s steps(44, end), blinkTextCursor 750ms steps(44) infinite normal;
+}
+
+#role {
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -moz-animation: fadein 2s; /* Firefox */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera */
+    animation: fadein 2s;
+}
+
+img.icon-image {
+    -webkit-animation: popUp .2s ease-in forwards; /* Safari and Chrome */
+    -moz-animation: popUp .2s ease-in forwards; /* Firefox */
+    -ms-animation: popUp .2s ease-in forwards; /* Internet Explorer */
+    -o-animation: popUp .2s ease-in forwards; /* Opera */
+	animation: popUp .2s ease-in forwards;
+}
+
+/* animation-delay supported by all browsers */
+#resume-image.icon-image { animation-delay: 1s }
+#github-image.icon-image { animation-delay: 1.1s }
+#email-image.icon-image { animation-delay: 1.2s }
+#linkedin-image.icon-image { animation-delay: 1.3s }
+#phone-image.icon-image { animation-delay: 1.4s }
