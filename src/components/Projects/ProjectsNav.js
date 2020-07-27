@@ -10,7 +10,7 @@ export default class ProjectsNav extends Component {
                     <Nav variant="tabs" defaultActiveKey="#first">
                     <Nav.Item>
                         <Nav.Link href="#first">
-                            The Coinsight
+                            Coinsight
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>

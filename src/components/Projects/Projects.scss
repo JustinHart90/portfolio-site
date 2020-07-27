@@ -1,3 +1,5 @@
+@import '../../styles/include-media';
+
 div.section-header {
     width: 100%;
     display: flex !important;
@@ -5,6 +7,29 @@ div.section-header {
     margin-bottom: 5px;
 }
 
+div.card {
+    border: 1px solid gray;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 div.card-body {
     background-color: #222222;
+}
+
+div.card-header {
+    color: white !important;
+    background-color: gray !important;
+}
+
+a.nav-link {
+    color: white;
+    font-size: 1rem;
+}
+
+@include media(">=phone-sm", "<=phone-lg") {
+    a.nav-link {
+        color: white;
+        font-size: .75rem;
+    }
 }
