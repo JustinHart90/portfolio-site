@@ -12,7 +12,7 @@ export class Education extends Component {
     return (
       <div>
         Education
-        <IconRow />
+        <IconRow shouldAnimate="false" />
       </div>
     );
   }

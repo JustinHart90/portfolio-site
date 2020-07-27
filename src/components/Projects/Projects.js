@@ -12,7 +12,7 @@ export class Projects extends Component {
     return (
       <div>
         Projects
-        <IconRow />
+        <IconRow shouldAnimate="false" />
       </div>
     );
   }

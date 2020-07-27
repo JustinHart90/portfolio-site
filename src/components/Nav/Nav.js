@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Navbar, NavbarBrand, NavItem, NavLink } from 'reactstrap';
 import { Link, useLocation } from 'react-router-dom';
 
-import './TopNavMenu.scss';
+import './Nav.scss';
 
 const NavMenu = (props) => {
   let location = useLocation()

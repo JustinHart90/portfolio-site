@@ -12,7 +12,7 @@ export class Experience extends Component {
     return (
       <div>
         Experience
-        <IconRow />
+        <IconRow shouldAnimate="false" />
       </div>
     );
   }

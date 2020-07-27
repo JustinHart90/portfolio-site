@@ -30,38 +30,11 @@ div#message-block {
     justify-content: center;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-}
-
-img.icon-image {
-    opacity: 0;
-    margin: 0;
-    padding: 0;
-    width: 2.25rem;
-    height: auto;
-    max-height: 300px;
-    margin-bottom: 1rem;
-    margin-top: 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-#github-image.icon-image {
-    background-color: #ffffff;
-}
-
 @include media(">=phone-sm", "<=phone-lg") {
     #name {
         font-size: 1.15rem;
     }
     #role {
         font-size: 1.15rem;
-    }
-    img.icon-image {
-        width: 2rem;
-        height: auto;
-        max-height: 200px !important;
     }
 }
