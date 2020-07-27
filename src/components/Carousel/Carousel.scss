@@ -1,0 +1,32 @@
+@import '../../styles/include-media';
+
+img.d-block.w-100 {
+    height: 50vh !important;
+    width: auto !important;
+    // background: linear-gradient( to bottom,
+    //     rgba(0,0,0,0),
+    //     rgba(0,0,0,.9)
+    // );
+}
+
+.carousel-inner {
+    overflow: visible;
+}
+
+@include media(">=phone-sm", "<=phone-lg") {
+    .carousel-item {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    img.d-block.w-100 {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@include media(">desktop", "<=3000px") {
+    img.d-block.w-100 {
+        width: 30%;
+        height: auto;
+    }
+}

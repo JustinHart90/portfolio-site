@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, Popover, Tooltip, OverlayTrigger } from 'react-bootstrap';
+import { Image, Popover, OverlayTrigger } from 'react-bootstrap';
 
 export default class Icon extends Component {
     static displayName = Icon.name;
@@ -15,13 +15,13 @@ export default class Icon extends Component {
 
     render () {
         const classNames = (
-            this.props.shouldAnimate == "false"
+            this.props.shouldAnimate === "false"
             ? 'icon-image'
             : 'icon-image animate'
         );
 
         const tooltipPlacement = (
-            this.props.shouldAnimate == "false"
+            this.props.shouldAnimate === "false"
             ? 'top'
             : 'bottom'
         );

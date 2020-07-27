@@ -14,7 +14,7 @@ export default class IconRow extends Component {
   
     render () {
         let animate = this.props.shouldAnimate
-        ,   containerClass = (animate == 'false' ? 'bottom' : '');
+        ,   containerClass = (animate === 'false' ? 'bottom' : '');
 
         return (
             <Container className={containerClass}>
@@ -22,7 +22,7 @@ export default class IconRow extends Component {
                     <Col xs={2} md={2}>
                         <Icon
                             id='resume-image'
-                            src='images/resume.png'
+                            src='images/icons/resume.png'
                             href='./resume.pdf'
                             tooltip='View/Download Resume'
                             tooltipTitle="Justin Hart's Resume"
@@ -33,7 +33,7 @@ export default class IconRow extends Component {
                     <Col xs={2} md={2}>
                         <Icon 
                             id='github-image' 
-                            src='images/github.png'
+                            src='images/icons/github-raw.png'
                             href='https://github.com/justinhart90'
                             tooltip='https://github.com/justinhart90'
                             tooltipTitle="GitHub Profile"
@@ -44,7 +44,7 @@ export default class IconRow extends Component {
                     <Col xs={2} md={2}>
                         <Icon
                             id='email-image'
-                            src='images/mail.png'
+                            src='images/icons/mail.png'
                             href='mailto:justinhart90@gmail.com'
                             tooltip='mailto:justinhart90@gmail.com'
                             tooltipTitle="Email Address"
@@ -55,7 +55,7 @@ export default class IconRow extends Component {
                     <Col xs={2} md={2}>
                         <Icon
                             id='linkedin-image'
-                            src='images/linkedin.png'
+                            src='images/icons/linkedin.png'
                             href='https://www.linkedin.com/in/justinhart90/'
                             tooltip='https://www.linkedin.com/in/justinhart90/'
                             tooltipTitle="LinkedIn Profile"
@@ -66,7 +66,7 @@ export default class IconRow extends Component {
                     <Col xs={2} md={2}>
                         <Icon
                             id='phone-image'
-                            src='images/phone.png'
+                            src='images/icons/phone.png'
                             href=''
                             tooltip='847.340.4789'
                             tooltipTitle="Phone Number"
