@@ -6,7 +6,7 @@ import IconRow from '../Shared/IconRow/IconRow';
 import Data from '../../data/experience.json';
 import '../../styles/_section.scss';
 
-export function Experience() {
+export default function Experience() {
   const [activeCompanyData, setActiveCompanyData] = useState(Data["ExperienceData"][0]);
   
   const allJobsArray = Data["ExperienceData"];
@@ -26,9 +26,6 @@ export function Experience() {
           allJobs={allJobsArray}
           onChangeCompany={setActiveCompanyData}
         />
-        {/* <ImageCarousel
-          data={activeCompanyData}
-        /> */}
         <IconRow 
           shouldAnimate="false" 
         />

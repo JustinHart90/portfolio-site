@@ -1,22 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactGA from 'react-ga';
-import { MessageBlock } from './MessageBlock/MessageBlock';
-import { Logo } from './Logo/Logo';
-import './Keyframes.scss';
-import './Animations.scss';
+import About from './About';
+import Contact from './Contact';
+import Footer from './Footer';
+import MessageBlock from './MessageBlock';
+import Logo from './Logo';
 
-export class Home extends Component {
-  static displayName = Home.name;
+import './Styles/Home.scss';
+
+export default function Home() {
   
-  render () {
-    ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
-    console.log(`HOME: ${window.location.pathname}`);
+  ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
+  console.log(window.location.pathname);
 
-    return (
-      <div>
+  return (
+    <div id="home-container">
+      <section id="landing" className="home-section">
         <Logo/>
         <MessageBlock/>
-      </div>
-    );
-  }
+      </section>
+      <section id="about" className="home-section">
+        <About/>
+      </section>
+      <section id="contact" className="home-section">
+        <Contact/>
+      </section>
+      <Footer />
+    </div>
+  );
 }

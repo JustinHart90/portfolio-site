@@ -6,7 +6,7 @@ import IconRow from '../Shared/IconRow/IconRow';
 import Data from '../../data/projects.json';
 import '../../styles/_section.scss';
 
-export function Projects() {
+export default function Projects() {
   const [activeProjectData, setActiveProjectData] = useState(Data["ProjectData"][0]);
   
   const allProjectsArray = Data["ProjectData"];

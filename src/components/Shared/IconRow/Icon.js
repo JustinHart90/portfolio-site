@@ -1,44 +1,36 @@
-import React, { Component } from 'react';
-import { Image, Popover, OverlayTrigger } from 'react-bootstrap';
+import React from 'react';
+import { Image, OverlayTrigger } from 'react-bootstrap';
+import Tooltip from './Tooltip';
 
-export default class Icon extends Component {
-    static displayName = Icon.name;
+export default function Icon(props) {
 
-    popover = (
-      <Popover id="popover-basic">
-        <Popover.Title as="h3">{this.props.tooltipTitle}</Popover.Title>
-        <Popover.Content>
-          {this.props.tooltip}
-        </Popover.Content>
-      </Popover>
+    const tooltip = (
+      <Tooltip {...props} />
     );
 
-    render () {
-        const classNames = (
-            this.props.shouldAnimate === "false"
-            ? 'icon-image'
-            : 'icon-image animate'
-        );
+    const classNames = (
+        props.shouldAnimate === "false"
+        ? 'icon-image'
+        : 'icon-image animate'
+    );
 
-        const tooltipPlacement = (
-            this.props.shouldAnimate === "false"
-            ? 'top'
-            : 'bottom'
-        );
-
-        return (
-          
-            <OverlayTrigger
-              placement={tooltipPlacement}
-              overlay={this.popover}
-            >
-              <Image
-                id={this.props.id}
-                src={this.props.src}
-                className={classNames}
-                onClick={() => this.props.handleButtonPress(this.props.href)}
-              />
-            </OverlayTrigger>
-        );
-    }
+    const tooltipPlacement = (
+        props.shouldAnimate === "false"
+        ? 'top'
+        : 'bottom'
+    );
+    
+    return (
+        <OverlayTrigger
+          placement={tooltipPlacement}
+          overlay={tooltip}
+        >
+          <Image
+            id={props.id}
+            src={props.src}
+            className={classNames}
+            onClick={() => props.handleButtonPress(props.href)}
+          />
+        </OverlayTrigger>
+    );
 }

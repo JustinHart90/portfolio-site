@@ -1,8 +1,8 @@
 @import '../../../styles/include-media';
 
 div#logo-container {
-    margin-top: 7.5%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     display: flex;
     justify-content: center;
 }
@@ -27,7 +27,7 @@ img#logo {
 
 @include media(">desktop", "<=3000px") {
     img#logo {
-        width: 30%;
+        width: 20%;
         height: auto;
         max-height: 150px;
     }

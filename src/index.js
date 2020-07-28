@@ -8,7 +8,6 @@ import ReactGA from 'react-ga';
 import App from './App';
 
 const history = createBrowserHistory();
-
 const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
 const rootElement = document.getElementById('root');
 
