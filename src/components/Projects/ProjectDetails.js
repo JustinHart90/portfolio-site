@@ -1,14 +1,10 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap';
+import { openUrl } from '../Shared/lib';
 import ProjectNav from './ProjectNav';
-import './Projects.scss';
+import '../../styles/_section.scss';
 
 export default function ProjectDetails(props) {
-
-    const openGithub = (url) => {
-        window.open(url, "_blank");
-    }
-
     return (
         <Card>
             <Card.Header>
@@ -21,7 +17,7 @@ export default function ProjectDetails(props) {
                 <Card.Text>
                     {props.activeProject["techStack"]}
                 </Card.Text>
-                <Button variant="primary" onClick={() => openGithub(props.activeProject.githubUrl)}>View GitHub</Button>
+                <Button variant="primary" onClick={() => openUrl(props.activeProject.githubUrl)}>View GitHub</Button>
             </Card.Body>
         </Card>
     );

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Nav } from 'react-bootstrap'
-import './Experience.scss';
+import '../../styles/_section.scss';
 
 export default class ExperienceNav extends Component {
     render() {
-        const activeJobName = this.props.activeJob.title;
+        const activeCompanyName = this.props.activeJob.company;
 
         const handleClick = (companyName) => {
             let newCompanyIndex = this.props.companyNames.indexOf(companyName)
@@ -13,7 +13,7 @@ export default class ExperienceNav extends Component {
         }
 
         return (
-            <Nav variant="tabs" defaultActiveKey={activeJobName}>
+            <Nav variant="tabs" defaultActiveKey={activeCompanyName}>
                 {this.props.companyNames.map(companyName => (
                 <Nav.Item key={`${companyName}`}>
                     <Nav.Link eventKey={`${companyName}`} key={`${companyName}`} onClick={(e) => handleClick(companyName)}>

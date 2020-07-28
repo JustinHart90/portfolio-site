@@ -30,7 +30,6 @@ export default class Icon extends Component {
           
             <OverlayTrigger
               placement={tooltipPlacement}
-              delay={{ show: 150, hide: 300 }}
               overlay={this.popover}
             >
               <Image

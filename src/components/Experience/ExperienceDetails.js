@@ -1,27 +1,31 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap'
+import { Card } from 'react-bootstrap'
 import ExperienceNav from './ExperienceNav';
-import './Experience.scss';
+import CompanyHeader from './CompanyHeader';
+import '../../styles/_section.scss';
 
 export default function ExperienceDetails(props) {
-
-    const openGithub = (url) => {
-        window.open(url, "_blank");
-    }
-
     return (
         <Card>
             <Card.Header>
                 <ExperienceNav {...props}/>
             </Card.Header>
-            <Card.Body>
-                <Card.Text>
-                    {props.activeJob["title"]}
-                </Card.Text>
-                <Card.Text>
-                    {props.activeJob["techStack"]}
-                </Card.Text>
-                <Button variant="primary" onClick={() => openGithub(props.activeJob.githubUrl)}>View GitHub</Button>
+            <Card.Body as="ul">
+                <CompanyHeader activeJob={props.activeJob} />
+
+                {props.activeJob.roles.map(roleObject => (
+                    <div key={roleObject.title}>
+                        <Card.Title as="h6" key={roleObject.title.length}>
+                            {roleObject.title} <small>({roleObject.dates})</small>
+                        </Card.Title>
+                        
+                        {roleObject.description.map(paragraph => (
+                            <Card.Text as="li" key={paragraph.length}>
+                                {paragraph}
+                            </Card.Text>
+                        ))}
+                    </div>
+                ))}
             </Card.Body>
         </Card>
     );

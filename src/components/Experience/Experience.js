@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import ReactGA from 'react-ga';
 import ExperienceDetails from './ExperienceDetails';
-import ImageCarousel from '../Shared/Carousel/Carousel';
+// import ImageCarousel from '../Shared/Carousel/Carousel';
 import IconRow from '../Shared/IconRow/IconRow';
 import Data from '../../data/experience.json';
-import './Experience.scss';
+import '../../styles/_section.scss';
 
 export function Experience() {
   const [activeCompanyData, setActiveCompanyData] = useState(Data["ExperienceData"][0]);
@@ -19,7 +19,7 @@ export function Experience() {
   }, []);
 
   return (
-      <div id="experience-container">
+      <div className="section-container">
         <ExperienceDetails
           companyNames={companyNamesArray}
           activeJob={activeCompanyData}

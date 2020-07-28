@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import '../../../styles/_section.scss';
 import './Carousel.scss';
 
 export default function ImageCarousel(props) {

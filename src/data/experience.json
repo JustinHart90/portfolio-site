@@ -1,33 +1,31 @@
 {
-    "CompanyNames": ["Rocky Mountain Devs", "JourneyApps", "Ricoh"],
+    "CompanyNames": ["JourneyApps", "Ricoh"],
     "ExperienceData": [
-        {
-            "company": "Rocky Mountain Devs",
-            "roles": [
-                {
-                    "title": "Freelance Developer",
-                    "description":"Utilize a diverse blend of business and software engineering experience to find creative solutions to client's problems.",
-                    "dates": "12/2019 - Present"
-                }
-            ],
-            "logo": "images/experience/rmd-logo.png",
-            "images": []
-        },
         {
             "company": "JourneyApps",
             "titles": ["Lead Solutions Engineer", "Software Solutions Engineer"],
             "roles": [
                 {
                     "title": "Lead Solutions Engineer",
-                    "description": "Designed and implemented software solutions, including collecting requirements, engineering estimations, data modeling, UI/UX design, and the implementation of advanced external integrations including customer ERP/Financial systems. Managed an international development team, including weekly individual meetings with each member to coach, train, mentor and ensure their personal, professional and technical advancement. Organized and led external client meetings and workshops; collaborated with executives, account managers and other technical stakeholders to continuously align technical capabilities with client needs.",
+                    "description": [
+                        "Designed and implemented software solutions, including collecting requirements, engineering estimations, data modeling, UI/UX design, and the implementation of advanced external integrations including customer ERP/Financial systems.",
+                        "Managed an international development team, including weekly individual meetings with each member to coach, train, mentor and ensure their personal, professional and technical advancement.",
+                        "Organized and led external client meetings and workshops; collaborated with executives, account managers and other technical stakeholders to continuously align technical capabilities with client needs."
+                    ],
                     "dates": "10/2018 - 9/2019"
                 },
                 {
                     "title": "Software Solutions Engineer",
-                    "description": "Utilized a cloud-based app platform that included writing business logic in JavaScript, implementing extensible data models and building server-side integrations and data processing tasks using AWS Lambda and NodeJS. Maintained a strong focus to deliver core value early, aiming to have a usable solution ready within 4 to 8 weeks. Consistently pushed the boundaries of what is possible and identified features and patterns that would add further value to our clients.",
+                    "description": [
+                        "Utilized a cloud-based app platform that included writing business logic in JavaScript, implementing extensible data models and building server-side integrations and data processing tasks using AWS Lambda and NodeJS.",
+                        "Maintained a strong focus to deliver core value early, aiming to have a usable solution ready within 4 to 8 weeks.",
+                        "Consistently pushed the boundaries of what is possible and identified features and patterns that would add further value to our clients."
+                    ],
                     "dates": "10/2017 - 10/2018"
                 }
             ],
+            "showWebsiteUrl": true,
+            "websiteUrl": "https://journeyapps.com/",
             "logo": "images/experience/journeyapps.png",
             "images": []
         },
@@ -37,21 +35,32 @@
             "roles": [
                 {
                     "title": "Project Manager",
-                    "description": "Configured & implemented a Professional Services Automation (PSA) tool that increased operational efficiency by automating processes, discovering new business intelligence through internal reporting, and reducing how many employees are needed on a project. Earned the RICOH Way Award in 2016 for achievements in innovation and automation. Collaborated with the Director of Global Program Management and various global stakeholders to create the Global Program Management Office (GPMO) within RICOH.",
+                    "description": [
+                        "Configured & implemented a Professional Services Automation (PSA) tool that increased operational efficiency by automating processes, discovering new business intelligence through internal reporting, and reducing how many employees are needed on a project.",
+                        "Earned the RICOH Way Award in 2016 for achievements in innovation and automation. Collaborated with the Director of Global Program Management and various global stakeholders to create the Global Program Management Office (GPMO) within RICOH."
+                    ],
                     "dates": "3/2013 - 2/2017"
                 },
                 {
                     "title": "Business Analyst",
-                    "description": "Managed the Profit & Loss statement and financial projections for global major accounts and led a project to cut costs by $120K in one year. Collaborated with key stakeholders to analyze, improve, and document business processes.",
+                    "description": [
+                        "Managed the Profit & Loss statement and financial projections for global major accounts and led a project to cut costs by $120K in one year.",
+                        "Collaborated with key stakeholders to analyze, improve, and document business processes."
+                    ],
                     "dates": "4/2012 - 3/2013"
                 },
                 {
                     "title": "Business Analyst Intern",
-                    "description": "Managed the Profit & Loss statement and financial projections for global major accounts and led a project to cut costs by $120K in one year. Collaborated with key stakeholders to analyze, improve, and document business processes.",
+                    "description": [
+                        "Managed the Profit & Loss statement and financial projections for global major accounts and led a project to cut costs by $120K in one year.",
+                        "Collaborated with key stakeholders to analyze, improve, and document business processes."
+                    ],
                     "dates": "5/2011 - 4/2012"
                 }
             ],
-            "logo": "images/experience/ricoh.jpg",
+            "showWebsiteUrl": true,
+            "websiteUrl": "https://www.ricoh-usa.com/en",
+            "logo": "images/experience/ricoh.png",
             "images": []
         }
     ]

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Nav } from 'react-bootstrap'
-import './Projects.scss';
+import { Nav } from 'react-bootstrap';
+import '../../styles/_section.scss';
 
 export default class ProjectNav extends Component {
     render() {

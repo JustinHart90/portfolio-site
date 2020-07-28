@@ -4,7 +4,7 @@ import ProjectDetails from './ProjectDetails';
 import ImageCarousel from '../Shared/Carousel/Carousel';
 import IconRow from '../Shared/IconRow/IconRow';
 import Data from '../../data/projects.json';
-import './Projects.scss';
+import '../../styles/_section.scss';
 
 export function Projects() {
   const [activeProjectData, setActiveProjectData] = useState(Data["ProjectData"][0]);
@@ -19,7 +19,7 @@ export function Projects() {
   }, []);
   
   return (
-      <div id="projects-container">
+      <div className="section-container">
         <ProjectDetails
           projectNames={projectNamesArray}
           activeProject={activeProjectData}
