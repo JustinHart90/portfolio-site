@@ -31,10 +31,10 @@ const NavMenu = (props) => {
                   <NavLink tag={Link} className={getClass('/')} to="/" onClick={updateHistory('/')}>Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className={getClass('/projects')} to="/projects" onClick={updateHistory('/projects')}>Projects</NavLink>
+                  <NavLink tag={Link} className={getClass('/experience')} to="/experience" onClick={updateHistory('/experience')}>Experience</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className={getClass('/experience')} to="/experience" onClick={updateHistory('/experience')}>Experience</NavLink>
+                  <NavLink tag={Link} className={getClass('/projects')} to="/projects" onClick={updateHistory('/projects')}>Projects</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink tag={Link} className={getClass('/education')} to="/education" onClick={updateHistory('/education')}>Education</NavLink>

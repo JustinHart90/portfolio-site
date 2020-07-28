@@ -4,6 +4,8 @@
         {
             "company": "JourneyApps",
             "titles": ["Lead Solutions Engineer", "Software Solutions Engineer"],
+            "websiteUrl": "https://journeyapps.com/",
+            "logo": "images/experience/journeyapps.png",
             "roles": [
                 {
                     "title": "Lead Solutions Engineer",
@@ -23,15 +25,13 @@
                     ],
                     "dates": "10/2017 - 10/2018"
                 }
-            ],
-            "showWebsiteUrl": true,
-            "websiteUrl": "https://journeyapps.com/",
-            "logo": "images/experience/journeyapps.png",
-            "images": []
+            ]
         },
         {
             "company": "Ricoh",
             "titles": ["Project Manager", "Business Analyst", "Business Analyst Intern"],
+            "websiteUrl": "https://www.ricoh-usa.com/en",
+            "logo": "images/experience/ricoh.png",
             "roles": [
                 {
                     "title": "Project Manager",
@@ -57,11 +57,7 @@
                     ],
                     "dates": "5/2011 - 4/2012"
                 }
-            ],
-            "showWebsiteUrl": true,
-            "websiteUrl": "https://www.ricoh-usa.com/en",
-            "logo": "images/experience/ricoh.png",
-            "images": []
+            ]
         }
     ]
 }

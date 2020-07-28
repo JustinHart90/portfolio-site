@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'react-bootstrap'
-import { openUrl } from '../Shared/lib';
 import '../../styles/_section.scss';
 import './Experience.scss';
 
@@ -13,13 +12,12 @@ export default function CompanyHeader(props) {
               alt="Company Logo"
             />
 
-            {props.activeJob.showWebsiteUrl &&
-                <Button 
-                    variant="primary" 
-                    onClick={() => openUrl(props.activeJob.websiteUrl)}>
-                    View Website
-                </Button>
-            }
+            <Button 
+                variant="primary"
+                href={props.activeJob.websiteUrl}
+                target="_blank">
+                View Website
+            </Button>
         </div>
     );
 }

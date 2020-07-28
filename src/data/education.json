@@ -1,0 +1,31 @@
+{
+    "SchoolNames": ["Galvanize", "PMI", "CU Boulder"],
+    "EducationData": [
+        {
+            "school": "Galvanize",
+            "longName": "Galvanize - Denver (Platte)",
+            "focus": "Web Development Immersive",
+            "dates": "2/2017 - 8/2017",
+            "websiteUrl": "https://www.galvanize.com/web-development",
+            "logo": "images/education/galvanize.png"
+        },
+        {
+            "school": "PMI",
+            "longName": "Project Management Institute",
+            "focus": "Certified Associate in Project Management",
+            "dates": "2013",
+            "websiteUrl": "https://journeyapps.com/",
+            "logo": "images/education/galvanize.png"
+        },
+        {
+            "school": "CU Boulder",
+            "longName": "University of Colorado at Boulder - Leeds School of Business",
+            "focus": "B.S. Business Administration, Finance",
+            "showGpa": true,
+            "gpa": "3.34",
+            "dates": "2008 - 2012",
+            "websiteUrl": "https://www.colorado.edu/business/",
+            "logo": "images/education/cu.jpg"
+        }
+    ]
+}
