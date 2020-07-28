@@ -18,6 +18,7 @@ export default function ImageCarousel(props) {
     
     // every time component renders
     useEffect(() => {
+      // if the title changes, always reset to show the first image
       if (props.data.title !== activeName) {
         setIndex(0);
       }

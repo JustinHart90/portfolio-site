@@ -15,7 +15,7 @@ export function Projects() {
   useEffect(() => {
     // Update the document title using the browser API
     ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
-    console.log(`PROJECTS: ${window.location.pathname}`);
+    console.log(window.location.pathname);
   }, []);
   
   return (

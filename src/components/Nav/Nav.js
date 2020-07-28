@@ -11,11 +11,11 @@ const NavMenu = (props) => {
   console.log(path);
 
   function getClass(checkPath) {
-    return (checkPath === path ? 'text-dark' : 'text-light');
+    return (checkPath === path ? 'text-light' : 'text-dark');
   }
 
   function updateHistory(path) {
-    console.log(`PATH TO EVENTUALLY UPDATE: ${path}`);
+    // console.log(`PATH TO EVENTUALLY UPDATE: ${path}`);
     // this.props.history.push({
     //   pathname: path
     // });
