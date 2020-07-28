@@ -1,0 +1,17 @@
+@import '../../../styles/include-media';
+
+img.d-block.w-100 {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.carousel-inner {
+    overflow: visible;
+}
+
+@include media(">=phone-sm", "<=phone-lg") {
+    .carousel-item {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
