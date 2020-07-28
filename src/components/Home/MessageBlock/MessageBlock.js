@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import IconRow from '../../IconRow/IconRow';
+import IconRow from '../../Shared/IconRow/IconRow';
 import './MessageBlock.scss';
 
 export class MessageBlock extends Component {

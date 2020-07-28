@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-import IconRow from '../IconRow/IconRow';
+import IconRow from '../Shared/IconRow/IconRow';
 
 export class Experience extends Component {
   static displayName = Experience.name;
