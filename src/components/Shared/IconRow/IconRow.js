@@ -1,18 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Icon from './Icon';
+import Icon from './Icon/Icon';
 import './IconRow.scss';
 
 export default function IconRow(props) {
-
-    const handleClick = (newPageUrl) => {
-        if (!newPageUrl || !newPageUrl.length) return;
-
-        window.open(newPageUrl, "_blank");
-    }
   
     const animate = props.shouldAnimate;
     const containerClass = (animate === 'false' ? 'bottom' : '');
+    const classNames = (animate === "false" ? 'icon-image' : 'icon-image animate');
 
     return (
         <Container className={containerClass}>
@@ -22,10 +17,9 @@ export default function IconRow(props) {
                         id='resume-image'
                         src='images/icons/resume.png'
                         href='./resume.pdf'
-                        tooltip='View/Download Resume'
+                        tooltip='Click to view/download'
                         tooltipTitle="Justin Hart's Resume"
-                        shouldAnimate={animate}
-                        handleButtonPress={handleClick}
+                        classNames={classNames}
                     />
                 </Col>
                 <Col xs={2} md={2}>
@@ -35,8 +29,7 @@ export default function IconRow(props) {
                         href='https://github.com/justinhart90'
                         tooltip='https://github.com/justinhart90'
                         tooltipTitle="GitHub Profile"
-                        shouldAnimate={animate}
-                        handleButtonPress={handleClick}
+                        classNames={classNames}
                     />
                 </Col>
                 <Col xs={2} md={2}>
@@ -46,8 +39,7 @@ export default function IconRow(props) {
                         href='mailto:justinhart90@gmail.com'
                         tooltip='mailto:justinhart90@gmail.com'
                         tooltipTitle="Email Address"
-                        shouldAnimate={animate}
-                        handleButtonPress={handleClick}
+                        classNames={classNames}
                     />
                 </Col>
                 <Col xs={2} md={2}>
@@ -57,8 +49,7 @@ export default function IconRow(props) {
                         href='https://www.linkedin.com/in/justinhart90/'
                         tooltip='https://www.linkedin.com/in/justinhart90/'
                         tooltipTitle="LinkedIn Profile"
-                        shouldAnimate={animate}
-                        handleButtonPress={handleClick}
+                        classNames={classNames}
                     />
                 </Col>
                 <Col xs={2} md={2}>
@@ -68,8 +59,7 @@ export default function IconRow(props) {
                         href=''
                         tooltip='847.340.4789'
                         tooltipTitle="Phone Number"
-                        shouldAnimate={animate}
-                        handleButtonPress={handleClick}
+                        classNames={classNames}
                     />
                 </Col>
             </Row>
