@@ -18,6 +18,10 @@ img#logo {
 }
 
 @include media(">=phone-sm", "<=phone-lg") {
+    div#logo-container {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
     img#logo {
         width: 50%;
         height: auto;
