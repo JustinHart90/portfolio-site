@@ -22,7 +22,7 @@ export default function IconRow(props) {
                         src='images/icons/resume.png'
                         href='./resume.pdf'
                         tooltip='Click to view/download'
-                        tooltipTitle="Justin Hart's Resume"
+                        tooltipTitle="Justin's Resume"
                         classNames={classNames}
                     />
                 </Col>
@@ -32,7 +32,7 @@ export default function IconRow(props) {
                         src='images/icons/github-raw.png'
                         href='https://github.com/justinhart90'
                         tooltip='https://github.com/justinhart90'
-                        tooltipTitle="GitHub Profile"
+                        tooltipTitle="GitHub"
                         classNames={classNames}
                     />
                 </Col>
@@ -42,7 +42,7 @@ export default function IconRow(props) {
                         src='images/icons/mail.png'
                         href='mailto:justinhart90@gmail.com'
                         tooltip='mailto:justinhart90@gmail.com'
-                        tooltipTitle="Email Address"
+                        tooltipTitle=""
                         classNames={classNames}
                     />
                 </Col>
@@ -52,7 +52,7 @@ export default function IconRow(props) {
                         src='images/icons/linkedin.png'
                         href='https://www.linkedin.com/in/justinhart90/'
                         tooltip='https://www.linkedin.com/in/justinhart90/'
-                        tooltipTitle="LinkedIn Profile"
+                        tooltipTitle="LinkedIn"
                         classNames={classNames}
                     />
                 </Col>
