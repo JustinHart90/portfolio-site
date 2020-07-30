@@ -4,6 +4,14 @@
 // If you have an initialization partial (or equivalent), you should move these
 // lines to that file. NOTE: Edit the lines to remove "!default".
 
+// Colors
+$color-dark: #222222;
+$color-light: #fcfcfc;
+$color-gray: gray;
+$color-dark-gray: rgba(255,255,255,.2);
+$color-red: #af5859;
+
+
 // The font size set on the root html element.
 $base-font-size: 16px !default;
 
@@ -15,7 +23,9 @@ $base-line-height: 24px !default;
 $base-unit: 'em' !default;
 
 // The default font family.
-$base-font-family: null !default;
+$base-font-family: 'Roboto', sans-serif, 'Lucida Grande', Helvetica, Arial !default;
+$secondary-font-family: 'Montserrat', sans-serif, 'Lucida Grande', Helvetica, Arial !default;
+$text-font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 
 // The font sizes for h1-h6.
 $h1-font-size: 2    * $base-font-size !default;

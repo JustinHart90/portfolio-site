@@ -1,0 +1,71 @@
+@import '../../../styles/variables';
+
+#process {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    color: $color-light;
+    background-color: $color-red;
+    font-family: $secondary-font-family;
+    height: auto;
+    padding: 4rem;
+    line-height: 2;
+}
+
+div.row#process-details {
+    margin-top: 4rem !important;
+
+    h2 {
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+    }
+
+    p {
+        font-family: $text-font-family;
+        padding: 0 1rem;
+    }
+}
+
+.process-container {
+    padding: 2rem;
+    font-size: 1.2rem;
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: bolder;
+        padding-bottom: 1rem;
+    }
+
+    div.img-container {
+        width: 100%;
+    }
+
+    img {
+        max-height: 100px;
+        max-width: 150px;
+        width: auto;
+        background-color: transparent;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    img#me {
+        max-height: 100px;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    p {
+        font-family: $text-font-family;
+        padding: 0 3rem;
+    }
+
+    div.tech-stack {
+        padding: 1rem 0;
+    }
+    
+    div.tech-stack p {
+        margin-bottom: 0.25rem !important;
+    }
+}

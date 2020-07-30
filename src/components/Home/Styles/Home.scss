@@ -3,18 +3,11 @@
 @import './_messageBlock.scss';
 @import './_logo.scss';
 @import './_footer.scss';
+@import './_contact.scss';
+@import './_process.scss';
+
 
 #landing {
-    height: 75vh;
-}
-
-#about {
-    background-color: #fcfcfc;
-    height: 95vh;
-}
-
-#contact {
-    background-color: rgba(255,255,255,.2);
     height: 80vh;
 }
 

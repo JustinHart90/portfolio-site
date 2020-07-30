@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 
-import Layout from './components/Layout/Layout';
+import Layout from './components/Layout';
 import Home from './components/Home/Home';
 import Projects from './components/Projects/Projects';
 import Experience from './components/Experience/Experience';

@@ -13,7 +13,11 @@ export default function IconMobile(props) {
 
     return (
       <div>
-        <Popover isOpen={props.isPopoverOpen} content={props.tooltip}>
+        <Popover
+          isOpen={props.isPopoverOpen}
+          content={props.tooltip}
+          onClickOutside={() => props.setIsPopoverOpen(false)}
+        >
           <Image 
             id={props.id}
             src={props.src}
