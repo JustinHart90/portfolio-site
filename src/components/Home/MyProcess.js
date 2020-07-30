@@ -43,10 +43,9 @@ export default function MyProcess() {
                     <h2>Revise</h2>
                     <FaEdit size={"2em"}/>
                     <p>
-                        We go through a demo of the site and star to add content in and change up any 
-                        design elements that don't work, or need more of. You tell me what you like or 
-                        don't like and I will go back and fix it up so you have the best possible site 
-                        you can have.
+                        We review together via periodically scheduled demos and start to add content 
+                        in and change up any design elements that don't work. You tell me what you 
+                        like or don't like and I will go back and fix prior to the next scheduled demo.
                     </p>
                 </div>
             </Col>
