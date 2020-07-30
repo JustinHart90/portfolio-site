@@ -10,11 +10,6 @@ div#logo-container {
 img#logo {
     width: 40%;
     height: auto;
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -moz-animation: fadein 2s; /* Firefox */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera */
-    animation: fadein 2s;
 }
 
 @include media(">=phone-sm", "<=phone-lg") {

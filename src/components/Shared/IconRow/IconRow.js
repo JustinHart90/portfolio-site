@@ -6,15 +6,19 @@ import './IconRow.scss';
 export default function IconRow(props) {
   
     const animate = props.shouldAnimate;
-    const containerClass = (animate === 'false' ? 'bottom' : '');
-    const classNames = (animate === "false" ? 'icon-image' : 'icon-image animate');
+    const containerClass = (!animate ? 'bottom' : '');
+    const classNames = (!animate ? 'icon-image' : 'icon-image animate');
+
+    const getId = (id) => {
+        return (!props.isContactForm ? id : `${id}-2`);
+    }
 
     return (
         <Container className={containerClass}>
-            <Row id='icon-row'>
+            <Row id={getId('icon-row')}>
                 <Col xs={2} md={2}>
                     <Icon
-                        id='resume-image'
+                        id={getId('resume-image')}
                         src='images/icons/resume.png'
                         href='./resume.pdf'
                         tooltip='Click to view/download'
@@ -24,7 +28,7 @@ export default function IconRow(props) {
                 </Col>
                 <Col xs={2} md={2}>
                     <Icon 
-                        id='github-image' 
+                        id={getId('github-image' )}
                         src='images/icons/github-raw.png'
                         href='https://github.com/justinhart90'
                         tooltip='https://github.com/justinhart90'
@@ -34,7 +38,7 @@ export default function IconRow(props) {
                 </Col>
                 <Col xs={2} md={2}>
                     <Icon
-                        id='email-image'
+                        id={getId('email-image')}
                         src='images/icons/mail.png'
                         href='mailto:justinhart90@gmail.com'
                         tooltip='mailto:justinhart90@gmail.com'
@@ -44,7 +48,7 @@ export default function IconRow(props) {
                 </Col>
                 <Col xs={2} md={2}>
                     <Icon
-                        id='linkedin-image'
+                        id={getId('linkedin-image')}
                         src='images/icons/linkedin.png'
                         href='https://www.linkedin.com/in/justinhart90/'
                         tooltip='https://www.linkedin.com/in/justinhart90/'
@@ -54,7 +58,7 @@ export default function IconRow(props) {
                 </Col>
                 <Col xs={2} md={2}>
                     <Icon
-                        id='phone-image'
+                        id={getId('phone-image')}
                         src='images/icons/phone.png'
                         href=''
                         tooltip='847.340.4789'

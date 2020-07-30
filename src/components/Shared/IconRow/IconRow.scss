@@ -1,4 +1,5 @@
 @import '../../../styles/include-media';
+@import '../../../styles/variables';
 
 .container {
     display: flex;
@@ -30,8 +31,8 @@ img.icon-image {
     color: black;
 }
 
-.stretch-to-fit {
-    width: 50px;
+div.react-tiny-popover-container {
+    color: $color-gray;
 }
 
 @include media(">=phone-sm", "<=phone-lg") {

@@ -6,7 +6,7 @@
     animation: typing 2s steps(44, end), blinkTextCursor 750ms steps(44) infinite normal;
 }
 
-#role {
+#role, img#logo {
     -webkit-animation: fadein 2s; /* Safari and Chrome */
     -moz-animation: fadein 2s; /* Firefox */
     -ms-animation: fadein 2s; /* Internet Explorer */
@@ -21,6 +21,7 @@ img.icon-image.animate {
     -o-animation: popUp .2s ease-in forwards; /* Opera */
 	animation: popUp .2s ease-in forwards;
 }
+
 
 /* animation-delay supported by all browsers */
 #resume-image.icon-image.animate {

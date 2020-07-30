@@ -27,9 +27,9 @@ export default function Home() {
       <Row id="process" className="home-section">
         <MyProcess/>
       </Row>
-      <Row id="contact" className="home-section">
+      {/* <Row id="contact" className="home-section">
         <Contact/>
-      </Row>
+      </Row> */}
       <Footer />
     </div>
   );

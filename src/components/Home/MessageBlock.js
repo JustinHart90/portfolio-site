@@ -6,7 +6,10 @@ export default function MessageBlock() {
       <div id="message-block">
           <p id="name">Justin Hart</p>
           <p id="role">Full Stack Web Developer</p>
-          <IconRow shouldAnimate="true" />
+          <IconRow 
+            shouldAnimate={true}
+            isContactForm={false}
+          />
       </div>
   );
 }

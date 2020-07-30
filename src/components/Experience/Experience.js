@@ -27,7 +27,8 @@ export default function Experience() {
           onChangeCompany={setActiveCompanyData}
         />
         <IconRow 
-          shouldAnimate="false" 
+          shouldAnimate={false}
+          isContactForm={false}
         />
       </div>
   );

@@ -3,7 +3,10 @@ import { Popover } from 'react-bootstrap';
 
 export default function Tooltip(props) {
     return (
-        <Popover id={"popover-basic"} {...props}>
+        <Popover 
+            {...props}
+            id={"popover-basic"}
+        >
             <Popover.Title as="h3">{props.tooltipTitle}</Popover.Title>
             <Popover.Content>
                 {props.tooltip}

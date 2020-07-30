@@ -1,6 +1,38 @@
 @import '../../../styles/variables';
 
 #contact {
-    background-color: $color-gray;
-    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    background-color: $color-light;
+    color: $color-dark;
+    font-family: $secondary-font-family;
+    height: auto;
+    min-height: 30vh;
+    max-height: 80vh;
+    padding: 4rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 2;
+}
+
+#contact-container {
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bolder;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    button {
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-family: $text-font-family;
+        padding: 0 5rem;
+        text-align: center;
+    }
 }

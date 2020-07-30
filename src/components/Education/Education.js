@@ -26,7 +26,8 @@ export default function Education() {
           onChangeSchool={setActiveSchoolData}
         />
         <IconRow 
-          shouldAnimate="false" 
+          shouldAnimate={false}
+          isContactForm={false}
         />
       </div>
   );

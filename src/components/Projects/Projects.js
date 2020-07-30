@@ -30,8 +30,9 @@ export default function Projects() {
           data={activeProjectData}
         />
         <IconRow 
-          shouldAnimate="false" 
-        />
+            shouldAnimate={false}
+            isContactForm={false}
+          />
       </div>
   );
 }

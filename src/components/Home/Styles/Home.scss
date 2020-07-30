@@ -1,3 +1,4 @@
+@import '../../../styles/include-media';
 @import './_animations.scss';
 @import './_keyframes.scss';
 @import './_messageBlock.scss';
@@ -8,7 +9,7 @@
 
 
 #landing {
-    height: 80vh;
+    height: 77.5vh;
 }
 
 div#home-container {
@@ -19,4 +20,22 @@ div#home-container {
   
 .home-section {
     scroll-snap-align: start;
+}
+
+@include media(">=phone-sm", "<=phone-lg") {
+    #landing {
+        height: 70vh;
+    }
+}
+
+@include media(">phone-lg", "<=tablet") {
+    #landing {
+        height: 80vh;
+    }
+}
+
+@include media(">tablet", "<=desktop") {
+    #landing {
+        height: 85vh;
+    }
 }
