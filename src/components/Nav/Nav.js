@@ -8,17 +8,8 @@ const NavMenu = (props) => {
   let location = useLocation()
   ,   path = location.pathname;
 
-  console.log(path);
-
   function getClass(checkPath) {
     return (checkPath === path ? 'text-light' : 'text-dark');
-  }
-
-  function updateHistory(path) {
-    // console.log(`PATH TO EVENTUALLY UPDATE: ${path}`);
-    // this.props.history.push({
-    //   pathname: path
-    // });
   }
 
   return (
@@ -28,16 +19,16 @@ const NavMenu = (props) => {
           <NavbarBrand></NavbarBrand>
             <ul className="navbar-nav flex-grow">
                 <NavItem>
-                  <NavLink tag={Link} className={getClass('/')} to="/" onClick={updateHistory('/')}>Home</NavLink>
+                  <NavLink tag={Link} className={getClass('/')} to="/">Home</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className={getClass('/experience')} to="/experience" onClick={updateHistory('/experience')}>Experience</NavLink>
+                  <NavLink tag={Link} className={getClass('/experience')} to="/experience">Experience</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className={getClass('/projects')} to="/projects" onClick={updateHistory('/projects')}>Projects</NavLink>
+                  <NavLink tag={Link} className={getClass('/projects')} to="/projects">Projects</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className={getClass('/education')} to="/education" onClick={updateHistory('/education')}>Education</NavLink>
+                  <NavLink tag={Link} className={getClass('/education')} to="/education">Education</NavLink>
                 </NavItem>
             </ul>
         </Container>

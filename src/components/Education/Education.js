@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactGA from 'react-ga';
+import React, { useState } from 'react';
 import EducationDetails from './EducationDetails';
 import IconRow from '../Shared/IconRow/IconRow';
 import Data from '../../data/education.json';
@@ -10,12 +9,6 @@ export default function Education() {
   
   const allSchoolsArray = Data["EducationData"];
   const schoolNamesArray = Data["SchoolNames"];
-
-  useEffect(() => {
-    // Update the document title using the browser API
-    ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
-    console.log(window.location.pathname);
-  }, []);
 
   return (
       <div className="section-container">

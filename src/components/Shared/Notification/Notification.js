@@ -8,9 +8,7 @@ export default function Notification(props) {
     const toggleToast = () => setShowToast(!showToast);
 
     return (
-        <div
-            className='toast-container' 
-            style={{ position: 'fixed', width: 'auto', whiteSpace: 'nowrap', top: 0, right: 0 }}>
+        <div className='toast-container'>
             <Toast 
                 show={showToast}
                 onClose={toggleToast}

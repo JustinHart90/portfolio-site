@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import ReactGA from 'react-ga';
+import React, { useState } from 'react';
 import ProjectDetails from './ProjectDetails';
 import ImageCarousel from '../Shared/Carousel/Carousel';
 import IconRow from '../Shared/IconRow/IconRow';
@@ -12,12 +11,6 @@ export default function Projects() {
   const allProjectsArray = Data["ProjectData"];
   const projectNamesArray = Data["ProjectNames"];
 
-  useEffect(() => {
-    // Update the document title using the browser API
-    ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
-    console.log(window.location.pathname);
-  }, []);
-  
   return (
       <div className="section-container">
         <ProjectDetails

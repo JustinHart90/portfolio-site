@@ -8,40 +8,52 @@ export default function ContactForm(props) {
     const [name, setName] = useState(null);
     const [message, setMessage] = useState(null);
 
-    const sendEmail = (e) => {
-        props.setLoading(true);
+    const resetForm = () => {
+        setEmail(null);
+        setName(null);
+        setMessage(null);
+    }
 
-        const form = e.currentTarget;
-        e.preventDefault();
-        
-        if (form.checkValidity() === false) {
-            e.stopPropagation();
-            props.setShowError(true);
-            return;
-        }
-
-        e.preventDefault();
-        setValidated(true);
-        console.log(`Email Address: ${email}`);
-        console.log(`Name: ${name}`);
-        console.log(`Message: ${message}`);
-
-        props.setShowSuccess(true);
+    const sendEmail = async () => {
         const data = { email, name, message };
 
         Axios.post('https://us-central1-justin-hart.cloudfunctions.net/sendMail', data)
         .then(response => {
+            if (response.status === 200 && response.data.indexOf('Error') === -1) {
+                props.setShowSuccess(true);
+            } else {
+                props.setShowError(true);
+            }
+
             props.setLoading(false);
-            console.log(response);
+            resetForm();
         })
         .catch(error => {
             props.setLoading(false);
+            props.setShowError(true);
             console.log(error)
         });
     }
 
+    const submitForm = async (e) => {
+        props.setLoading(true);
+        e.preventDefault();
+
+        const form = e.currentTarget;
+        
+        if (form.checkValidity() === false) {
+            e.stopPropagation();
+            setValidated(false);
+            props.setLoading(false);
+            return;
+        }
+
+        setValidated(true);
+        await sendEmail();
+    }
+
     return (
-        <Form noValidate validated={validated} onSubmit={sendEmail}>
+        <Form validated={validated} onSubmit={submitForm}>
             <Form.Group controlId="form-email">
                 <Form.Label>
                     Email address *
@@ -49,6 +61,7 @@ export default function ContactForm(props) {
                 <Form.Control 
                     type="email"
                     placeholder="Enter email here..." 
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 <Form.Text className="text-muted">
@@ -63,6 +76,7 @@ export default function ContactForm(props) {
                 <Form.Control
                     type="name"
                     placeholder="Enter name here..."
+                    value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
             </Form.Group>
@@ -75,6 +89,7 @@ export default function ContactForm(props) {
                     as="textarea" 
                     rows="3" 
                     placeholder="Enter message here..."
+                    value={message}
                     onChange={(e) => setMessage(e.target.value)}
                 />
             </Form.Group>

@@ -5,21 +5,25 @@ import IconRow from '../../Shared/IconRow/IconRow';
 import Notification from '../../Shared/Notification/Notification';
 
 export default function Contact() {
-  const [showSuccess, setShowSuccess] = useState(true);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
 
   return (
     <>
-      <Notification
-          title="Email sent!"
-          message="You can expect a response within 24-48 hours."
-          show={showSuccess}
-      />
-      <Notification
-          title="Email failed to send!"
-          message="Please check your connection and try again."
-          show={showError}
-      />
+      {showSuccess &&
+        <Notification
+            title="Email sent!"
+            message="You can expect a response within 24-48 hours."
+            show={showSuccess}
+        />
+      }
+      {showError &&
+        <Notification
+            title="Email failed to send!"
+            message="Please check your connection and try again."
+            show={showError}
+        />
+      }
 
       <Col id="contact-container" xs="12" sm="10" md="8" lg="6">
         <h2>Contact Me</h2>

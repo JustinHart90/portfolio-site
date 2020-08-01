@@ -11,6 +11,9 @@ admin.initializeApp();
 */
 let transporter = nodemailer.createTransport({
     service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true, 
     auth: {
         user: functions.config().email.account,
         pass: functions.config().email.pass
@@ -20,19 +23,24 @@ let transporter = nodemailer.createTransport({
 exports.sendMail = functions.https.onRequest((req, res) => {
     cors(req, res, () => {
       
-        // getting destination email/name by query string
-        const email = req.query.email;
-        const name = req.query.name;
-        const message = req.query.message;
+        const email = req.body.email;
+        const name = req.body.name;
+        const message = req.body.message;
+
+        const fullMessage = `${name} (${email}): ${message}`
+        const htmlTemplate = `
+            <p style="font-size: 16px;">Name: ${name}</p>
+            <p style="font-size: 16px;">Email: ${email}</p>
+            <p style="font-size: 16px;">Message:</p>
+            <p style="font-size: 12px;">${message}</p>
+        `
 
         const mailOptions = {
-            from: `${name} <${email}>`, // Something like: Jane Doe <janedoe@gmail.com>
+            from: email, // Something like: Jane Doe <janedoe@gmail.com>
             to: functions.config().email.to,
             subject: 'Personal Site - New Message!', // email subject
-            html: `
-                <br />
-                <p style="font-size: 16px;">${message}</p>
-            ` // email content in HTML
+            text: fullMessage,
+            html: htmlTemplate.toString() // email content in HTML
         };
   
         // returning result

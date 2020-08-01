@@ -13,12 +13,12 @@ const styleSpinner = css`
 export default function Spinner(props) { 
     return (
         <div className="sweet-loading" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <BeatLoader
-            css={styleSpinner}
-            size={50}
-            color={"#74a0d4"}
-            loading={props.loading}
-        />
+            <BeatLoader
+                css={styleSpinner}
+                size={50}
+                color={"#74a0d4"}
+                loading={props.loading}
+            />
         </div>
     );
 }

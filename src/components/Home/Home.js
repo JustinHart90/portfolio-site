@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row } from 'react-bootstrap';
-import ReactGA from 'react-ga';
 import About from './About';
 import MyProcess from './MyProcess';
 import Contact from './Contact/Contact';
@@ -11,10 +10,6 @@ import Logo from './Logo';
 import './Styles/Home.scss';
 
 export default function Home() {
-  
-  ReactGA.pageview(window.location.pathname); // Record a pageview for the given page
-  console.log(window.location.pathname);
-
   return (
     <div id="home-container">
       <section id="landing" className="home-section">
