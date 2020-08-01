@@ -4,7 +4,7 @@ import './Styles/_about.scss';
 
 export default function About() {
   return (
-    <Col id="about-container" xs="12" sm="10" md="8" lg="6" xl="4">
+    <Col id="about-container" xs="11" sm="10" md="8" lg="6" xl="4">
       <h2>A LITTLE BIT ABOUT ME</h2>
       <div className="container">
         <Image roundedCircle id="me" src="images/me.jpeg" alt="about" />

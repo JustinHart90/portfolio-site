@@ -72,12 +72,18 @@ div.row#process-details {
 }
 
 @include media(">=phone-sm", "<=phone-lg") {
-    .process-container {
+    .process-container, #process-details {
         padding: 0;
         font-size: 0.85rem;
 
+        h2 {
+            padding-bottom: 0 !important;
+        }
+
         p {
-            padding: 0;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            font-size: 0.85rem;
         }
     }
 }
