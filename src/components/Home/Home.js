@@ -3,7 +3,7 @@ import { Row } from 'react-bootstrap';
 import ReactGA from 'react-ga';
 import About from './About';
 import MyProcess from './MyProcess';
-import Contact from './Contact';
+import Contact from './Contact/Contact';
 import Footer from './Footer';
 import MessageBlock from './MessageBlock';
 import Logo from './Logo';
@@ -27,9 +27,9 @@ export default function Home() {
       <Row id="process" className="home-section">
         <MyProcess/>
       </Row>
-      {/* <Row id="contact" className="home-section">
+      <Row id="contact" className="home-section">
         <Contact/>
-      </Row> */}
+      </Row>
       <Footer />
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import Axios from 'axios';
 
 export default function ContactForm(props) {
     const [validated, setValidated] = useState(false);
@@ -8,6 +9,8 @@ export default function ContactForm(props) {
     const [message, setMessage] = useState(null);
 
     const sendEmail = (e) => {
+        props.setLoading(true);
+
         const form = e.currentTarget;
         e.preventDefault();
         
@@ -24,6 +27,17 @@ export default function ContactForm(props) {
         console.log(`Message: ${message}`);
 
         props.setShowSuccess(true);
+        const data = { email, name, message };
+
+        Axios.post('https://us-central1-justin-hart.cloudfunctions.net/sendMail', data)
+        .then(response => {
+            props.setLoading(false);
+            console.log(response);
+        })
+        .catch(error => {
+            props.setLoading(false);
+            console.log(error)
+        });
     }
 
     return (
