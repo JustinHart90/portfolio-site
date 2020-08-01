@@ -4,14 +4,14 @@ import Axios from 'axios';
 
 export default function ContactForm(props) {
     const [validated, setValidated] = useState(false);
-    const [email, setEmail] = useState(null);
-    const [name, setName] = useState(null);
-    const [message, setMessage] = useState(null);
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
 
     const resetForm = () => {
-        setEmail(null);
-        setName(null);
-        setMessage(null);
+        setEmail('');
+        setName('');
+        setMessage('');
     }
 
     const sendEmail = async () => {

@@ -73,6 +73,9 @@ div.row#process-details {
 
 @include media(">=phone-sm", "<=phone-lg") {
     .process-container {
+        padding: 0;
+        font-size: 0.85rem;
+
         p {
             padding: 0;
         }
