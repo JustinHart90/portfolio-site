@@ -9,7 +9,8 @@
 
 
 #landing {
-    height: 77.5vh;
+    min-height: 77.5vh;
+    height: auto;
 }
 
 div#home-container {
@@ -24,18 +25,21 @@ div#home-container {
 
 @include media(">=phone-sm", "<=phone-lg") {
     #landing {
-        height: 70vh;
+        min-height: 70vh;
+        height: auto;
     }
 }
 
 @include media(">phone-lg", "<=tablet") {
     #landing {
-        height: 80vh;
+        min-height: 80vh;
+        height: auto;
     }
 }
 
 @include media(">tablet", "<=desktop") {
     #landing {
-        height: 85vh;
+        min-height: 85vh;
+        height: auto;
     }
 }
