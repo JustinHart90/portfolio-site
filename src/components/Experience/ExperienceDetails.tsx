@@ -1,32 +1,11 @@
 import React from 'react';
-import { Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap';
+import { ExperienceData } from '../../interfaces/experience';
 import ExperienceNav from './ExperienceNav';
 import CompanyHeader from './CompanyHeader';
 import '../../styles/_section.scss';
 
-interface Role {
-    title: string;
-    description: Array<string>;
-    dates: string;
-}
-
-interface ActiveJob {
-    company: string;
-    titles: Array<string>;
-    websiteUrl: string;
-    logo: string;
-    roles: Array<Role>
-}
-
-interface ExperienceDetailsProps {
-    companyNames: Array<string>;
-    activeJob: ActiveJob;
-    allJobs: Array<ActiveJob>;
-
-    onChangeCompany(activeCompanyData: ActiveJob) : void;
-}
-
-export default function ExperienceDetails(props: ExperienceDetailsProps) {
+export default function ExperienceDetails(props: ExperienceData) {
     return (
         <Card>
             <Card.Header>

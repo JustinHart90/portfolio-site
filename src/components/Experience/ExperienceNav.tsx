@@ -1,30 +1,9 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap';
+import { ExperienceData } from '../../interfaces/experience';
 import '../../styles/_section.scss';
 
-interface Role {
-    title: string;
-    description: Array<string>;
-    dates: string;
-}
-
-interface ActiveJob {
-    company: string;
-    titles: Array<string>;
-    websiteUrl: string;
-    logo: string;
-    roles: Array<Role>
-}
-
-interface ExperienceNavProps {
-    companyNames: Array<string>;
-    activeJob: ActiveJob;
-    allJobs: Array<ActiveJob>;
-
-    onChangeCompany(activeCompanyData: ActiveJob) : void;
-}
-
-export default function ExperienceNav(props: ExperienceNavProps) {
+export default function ExperienceNav(props: ExperienceData) {
     const activeCompanyName = props.activeJob.company;
 
     const handleClick = (companyName: string) => {

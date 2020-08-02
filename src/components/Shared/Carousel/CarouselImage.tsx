@@ -1,10 +1,7 @@
 import React from 'react';
+import { CarouselImage as CarouselImageProps } from '../../../interfaces/shared';
 import { getImageAlt } from '../lib';
 
-interface CarouselImageProps {
-    imageUrl: string,
-    index: number
-}
 export default function CarouselImage(props: CarouselImageProps) {
     return (
         <img

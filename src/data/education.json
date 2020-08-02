@@ -25,7 +25,7 @@
             "name": "CU Boulder",
             "longName": "University of Colorado at Boulder - Leeds School of Business",
             "focus": "B.S. Business Administration, Finance",
-            "showGpa": true,
+            "showGpa": false,
             "gpa": "3.34",
             "dates": "2008 - 2012",
             "websiteUrl": "https://www.colorado.edu/business/",

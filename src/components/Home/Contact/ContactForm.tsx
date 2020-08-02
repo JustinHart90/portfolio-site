@@ -1,26 +1,21 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { Contact } from '../../../interfaces/home';
 import Axios from 'axios';
 
-interface ContactFormProps {
-    setShowSuccess(showSuccess: boolean) : void;
-    setShowError(showError: boolean) : void;
-    setLoading(loading: boolean) : void;
-}
-
-export default function ContactForm(props: ContactFormProps) {
+export default function ContactForm(props: Contact) {
     const [validated, setValidated] = useState(false);
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [message, setMessage] = useState('');
 
-    const resetForm = () => {
+    const resetForm = () : void => {
         setEmail('');
         setName('');
         setMessage('');
     }
 
-    const sendEmail = async () => {
+    const sendEmail = async () : Promise<void> => {
         const data = { email, name, message };
 
         Axios.post('https://us-central1-justin-hart.cloudfunctions.net/sendMail', data)
@@ -41,7 +36,7 @@ export default function ContactForm(props: ContactFormProps) {
         });
     }
 
-    const submitForm = async (e: React.FormEvent<HTMLInputElement>) : Promise<void> => {
+    const submitForm = async (e: FormEvent<HTMLInputElement>) : Promise<void> => {
         props.setLoading(true);
         e.preventDefault();
 
@@ -68,7 +63,7 @@ export default function ContactForm(props: ContactFormProps) {
                     type="email"
                     placeholder="Enter email here..." 
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                     />
                 <Form.Text className="text-muted">
                     I will never share your email address with anyone. Ever.
@@ -83,7 +78,7 @@ export default function ContactForm(props: ContactFormProps) {
                     type="name"
                     placeholder="Enter name here..."
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
                 />
             </Form.Group>
 
@@ -96,7 +91,7 @@ export default function ContactForm(props: ContactFormProps) {
                     rows={3}
                     placeholder="Enter message here..."
                     value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setMessage(e.target.value)}
                 />
             </Form.Group>
 

@@ -1,25 +1,9 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
+import { ProjectDetails } from '../../interfaces/projects';
 import '../../styles/_section.scss';
 
-interface ActiveProjectData {
-    title: string;
-    techStack: string;
-    description: string;
-    logo: string;
-    githubUrl: string;
-    images: Array<string>;
-}
-
-interface ProjectDetailsProps {
-    projectNames: Array<string>;
-    activeProject : ActiveProjectData;
-    allProjects: Array<ActiveProjectData>;
-
-    onChangeProject(activeProject: ActiveProjectData) : void;
-}
-
-export default function ProjectNav(props: ProjectDetailsProps) {
+export default function ProjectNav(props: ProjectDetails) {
     const activeProjectName = props.activeProject.title;
 
     const handleClick = (projectName: string) : void => {

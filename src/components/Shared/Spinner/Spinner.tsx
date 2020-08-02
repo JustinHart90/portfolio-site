@@ -1,10 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import BeatLoader from "react-spinners/BeatLoader";
-
-interface SpinnerProps {
-    loading: boolean
-}
+import { Spinner as SpinnerProps } from '../../../interfaces/shared';
 
 // Can be a string as well. Need to ensure each key-value pair ends with ;
 const styleSpinner = css`

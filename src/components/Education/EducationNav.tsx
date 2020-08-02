@@ -1,26 +1,9 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap'
+import { Nav } from 'react-bootstrap';
+import { EducationData } from '../../interfaces/education';
 import '../../styles/_section.scss';
 
-interface SchoolData {
-    readonly name: string;
-    readonly longName: string;
-    readonly focus: string;
-    readonly showGpa: boolean;
-    readonly gpa: string;
-    readonly dates: string;
-    readonly websiteUrl: string;
-    readonly logo: string;
-}
-
-interface EducationNavProps {
-    readonly schoolNames: Array<string>;
-    readonly activeSchool: SchoolData;
-    readonly allSchools: Array<SchoolData>;
-    onChangeSchool(activeSchoolData: SchoolData) : void;
-}
-
-export default function EducationNav(props: EducationNavProps) {
+export default function EducationNav(props: EducationData) {
     const activeSchoolName = props.activeSchool.name;
 
     const handleClick = (schoolName: string) => {

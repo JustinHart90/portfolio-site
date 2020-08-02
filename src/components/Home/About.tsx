@@ -17,14 +17,14 @@ export default function About() {
       
       <div className="tech-stack">
         {data.techNameRows.map((row: string) => (
-          <p>{row}</p>
+          <p key={row}>{row}</p>
         ))}
       </div>
 
-      {data.techImageRows.map((imageSrcArray: Array<string>) => (
-        <div className="img-container">
+      {data.techImageRows.map((imageSrcArray: Array<string>, index: number) => (
+        <div className="img-container" key={index}>
           {imageSrcArray.map((imageSrc: string) => (
-            <Image src={imageSrc} alt="tech-image" />
+            <Image key={imageSrc} src={imageSrc} alt="tech-image" />
           ))}
         </div>
       ))}

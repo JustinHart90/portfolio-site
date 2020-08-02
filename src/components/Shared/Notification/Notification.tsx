@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import { Toast } from 'react-bootstrap';
+import { Notification as NotificationProps } from '../../../interfaces/shared';
 import './Notification.scss';
 
-interface NotificationProps {
-    show: boolean,
-    title: string,
-    message: string
-}
 export default function Notification(props: NotificationProps) {
     const [showToast, setShowToast] = useState(props.show);
 

@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import { CarouselData } from '../../../interfaces/shared';
 import CarouselImage from './CarouselImage';
 import '../../../styles/_section.scss';
 import './Carousel.scss';
 
-interface CarouselProps {
-  data: {
-    title: string,
-    images: Array<string>
-  }
-}
-
-export default function ImageCarousel(props: CarouselProps) {
+export default function ImageCarousel(props: CarouselData) {
   const [index, setIndex] = useState(0);
   const [activeName] = useState(props.data.title);
   

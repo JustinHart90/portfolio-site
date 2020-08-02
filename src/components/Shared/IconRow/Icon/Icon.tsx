@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import { isMobile } from "react-device-detect";
-
+import { isMobile } from 'react-device-detect';
+import { IconDetails } from '../../../../interfaces/shared';
 import IconDesktop from './IconDesktop';
 import IconMobile from './IconMobile';
 
-interface IconProps {
-  id: string;
-  classNames: string;
-  readonly src: string;
-  readonly href: string;
-  readonly tooltip: JSX.Element;
-  readonly tooltipTitle: string;
-}
-
-export default function Icon(props: IconProps) {
+export default function Icon(props: IconDetails) {
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
     const renderIcon = () => {

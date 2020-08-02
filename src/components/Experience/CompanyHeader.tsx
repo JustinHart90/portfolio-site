@@ -1,25 +1,8 @@
 import React from 'react';
-import { Button } from 'react-bootstrap'
+import { Button } from 'react-bootstrap';
+import { ActiveJob } from '../../interfaces/experience';
 
-interface Role {
-    title: string;
-    description: Array<string>;
-    dates: string;
-}
-
-interface ActiveJob {
-    company: string;
-    titles: Array<string>;
-    websiteUrl: string;
-    logo: string;
-    roles: Array<Role>
-}
-
-interface CompanyHeaderProps {
-    activeJob: ActiveJob;
-}
-
-export default function CompanyHeader(props: CompanyHeaderProps) {
+export default function CompanyHeader(props: ActiveJob) {
     return (
         <div className="section-header" key="company-header">
             <img

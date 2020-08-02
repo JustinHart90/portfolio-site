@@ -1,24 +1,9 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { ProjectDetails as ProjectDetailsProps } from '../../interfaces/projects';
 import ProjectNav from './ProjectNav';
 import '../../styles/_section.scss';
 
-interface ActiveProjectData {
-    title: string;
-    techStack: string;
-    description: string;
-    logo: string;
-    githubUrl: string;
-    images: Array<string>;
-}
-
-interface ProjectDetailsProps {
-    projectNames: Array<string>;
-    activeProject : ActiveProjectData;
-    allProjects: Array<ActiveProjectData>;
-
-    onChangeProject(activeProject: ActiveProjectData) : void;
-}
 export default function ProjectDetails(props: ProjectDetailsProps) {
     return (
         <Card>

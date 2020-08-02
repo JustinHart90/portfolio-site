@@ -1,28 +1,11 @@
 import React from 'react';
-import { Card } from 'react-bootstrap'
+import { Card } from 'react-bootstrap';
+import { EducationData } from '../../interfaces/education';
 import EducationNav from './EducationNav';
 import SchoolHeader from './SchoolHeader';
 import '../../styles/_section.scss';
 
-interface SchoolData {
-    readonly name: string;
-    readonly longName: string;
-    readonly focus: string;
-    readonly showGpa: boolean;
-    readonly gpa: string;
-    readonly dates: string;
-    readonly websiteUrl: string;
-    readonly logo: string;
-}
-
-interface EducationDetailsProps {
-    readonly schoolNames: Array<string>;
-    readonly activeSchool: SchoolData;
-    readonly allSchools: Array<SchoolData>;
-    onChangeSchool(activeSchoolData: SchoolData) : void;
-}
-
-export default function EducationDetails(props: EducationDetailsProps) {
+export default function EducationDetails(props: EducationData) {
     return (
         <Card>
             <Card.Header>

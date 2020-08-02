@@ -1,21 +1,10 @@
 import React from 'react';
 import Popover from 'react-tiny-popover';
+import { RenderIcon } from '../../../../interfaces/shared';
 import { Image } from 'react-bootstrap';
 import { openUrl } from '../../lib';
 
-interface IconMobileProps {
-  id: string;
-  classNames: string;
-  isPopoverOpen: boolean;
-  readonly src: string;
-  readonly href: string;
-  readonly tooltip: any;
-  readonly tooltipTitle: string;
-  
-  setIsPopoverOpen(isPopoverOpen: boolean) : void;
-}
-
-export default function IconMobile(props: IconMobileProps) {
+export default function IconMobile(props: RenderIcon) {
     return (
       <div>
         <Popover
