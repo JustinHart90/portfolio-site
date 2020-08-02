@@ -1,0 +1,30 @@
+{
+    "header": {
+        "title": "A little bit about me",
+        "description": "I’m a software engineer / web developer based in Denver, Colorado. Started as a Project Manager, then later transitioned into programming and found myself in web development.",
+        "imgSrc": "images/me.jpeg"
+    },
+    "skills": {
+        "title": "Skills",
+        "description": "Fullstack Developer. Meaning that I am both a frontend and backend developer. Which also means I can design and develop anything to any specification."
+    },
+    "techNameRows": [
+        "Node.js | Express",
+        "React | AngularJS",
+        "PostgreSQL | MongoDB"
+    ],
+    "techImageRows": [
+        [
+            "images/tech/node.png",
+            "images/tech/express.png"
+        ],
+        [
+            "images/tech/react.png",
+            "images/tech/angular.png"
+        ],
+        [
+            "images/tech/postgres.png",
+            "images/tech/mongo.png"
+        ]
+    ]
+}

@@ -4,14 +4,17 @@ import { isMobile } from "react-device-detect";
 import IconDesktop from './IconDesktop';
 import IconMobile from './IconMobile';
 
-export default function Icon(props) {
-    const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-    const tooltip = `${props.tooltipTitle}: ${props.tooltip}`;
+interface IconProps {
+  id: string;
+  classNames: string;
+  readonly src: string;
+  readonly href: string;
+  readonly tooltip: JSX.Element;
+  readonly tooltipTitle: string;
+}
 
-    const openUrl = (url) => {
-      if (!url || !url.length) return;
-      window.open(url, "_blank");
-    }
+export default function Icon(props: IconProps) {
+    const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
     const renderIcon = () => {
       if (isMobile) {
@@ -20,8 +23,6 @@ export default function Icon(props) {
             {...props} 
             isPopoverOpen={isPopoverOpen}
             setIsPopoverOpen={setIsPopoverOpen}
-            tooltip={tooltip}
-            openUrl={openUrl}
           />
         );
       } else {
@@ -30,8 +31,6 @@ export default function Icon(props) {
             {...props} 
             isPopoverOpen={isPopoverOpen}
             setIsPopoverOpen={setIsPopoverOpen}
-            tooltip={tooltip}
-            openUrl={openUrl}
           />
         );
       }

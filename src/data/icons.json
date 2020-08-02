@@ -1,0 +1,37 @@
+[
+    {
+        "id": "resume-image",
+        "src": "images/icons/resume.png",
+        "href": "./resume.pdf",
+        "tooltip": "Click to view/download",
+        "tooltipTitle": "Justin's Resume"
+    },
+    {
+        "id": "github-image" ,
+        "src": "images/icons/github-raw.png",
+        "href": "https://github.com/justinhart90",
+        "tooltip": "https://github.com/justinhart90",
+        "tooltipTitle": "GitHub"
+    },
+    {
+        "id": "email-image",
+        "src": "images/icons/mail.png",
+        "href": "mailto:justinhart90@gmail.com",
+        "tooltip": "justinhart90@gmail.com",
+        "tooltipTitle": "Email"
+    },
+    {
+        "id": "linkedin-image",
+        "src": "images/icons/linkedin.png",
+        "href": "https://www.linkedin.com/in/justinhart90/",
+        "tooltip": "https://www.linkedin.com/in/justinhart90/",
+        "tooltipTitle": "LinkedIn"
+    },
+    {
+        "id": "phone-image",
+        "src": "images/icons/phone.png",
+        "href": "",
+        "tooltip": "847.340.4789",
+        "tooltipTitle": "Phone Number"
+    }
+]

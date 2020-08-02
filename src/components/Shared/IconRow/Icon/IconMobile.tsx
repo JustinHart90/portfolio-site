@@ -1,16 +1,21 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
 import Popover from 'react-tiny-popover';
+import { Image } from 'react-bootstrap';
+import { openUrl } from '../../lib';
 
-export default function IconMobile(props) {
-    const handleClick = () => {
-        if (props.isPopoverOpen) {
-            return props.openUrl(props.href);
-        }
+interface IconMobileProps {
+  id: string;
+  classNames: string;
+  isPopoverOpen: boolean;
+  readonly src: string;
+  readonly href: string;
+  readonly tooltip: any;
+  readonly tooltipTitle: string;
+  
+  setIsPopoverOpen(isPopoverOpen: boolean) : void;
+}
 
-        return props.setIsPopoverOpen(!props.isPopoverOpen);
-    }
-
+export default function IconMobile(props: IconMobileProps) {
     return (
       <div>
         <Popover
@@ -21,11 +26,9 @@ export default function IconMobile(props) {
           <Image 
             id={props.id}
             src={props.src}
-            href={props.href}
             className={props.classNames}
-            target='_blank'
             alt='icon'
-            onClick={() => handleClick()}
+            onClick={() => openUrl(props.href)}
           />
         </Popover>
       </div>

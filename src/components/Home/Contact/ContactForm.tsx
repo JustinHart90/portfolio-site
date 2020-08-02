@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import Axios from 'axios';
 
-export default function ContactForm(props) {
+interface ContactFormProps {
+    setShowSuccess(showSuccess: boolean) : void;
+    setShowError(showError: boolean) : void;
+    setLoading(loading: boolean) : void;
+}
+
+export default function ContactForm(props: ContactFormProps) {
     const [validated, setValidated] = useState(false);
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
@@ -35,7 +41,7 @@ export default function ContactForm(props) {
         });
     }
 
-    const submitForm = async (e) => {
+    const submitForm = async (e: React.FormEvent<HTMLInputElement>) : Promise<void> => {
         props.setLoading(true);
         e.preventDefault();
 
@@ -87,7 +93,7 @@ export default function ContactForm(props) {
                 </Form.Label>
                 <Form.Control 
                     as="textarea" 
-                    rows="3" 
+                    rows={3}
                     placeholder="Enter message here..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}

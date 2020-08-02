@@ -2,7 +2,22 @@ import React from 'react';
 import { Button } from 'react-bootstrap'
 import '../../styles/_section.scss';
 
-export default function SchoolHeader(props) {
+interface SchoolData {
+    readonly name: string;
+    readonly longName: string;
+    readonly focus: string;
+    readonly showGpa: boolean;
+    readonly gpa: string;
+    readonly dates: string;
+    readonly websiteUrl: string;
+    readonly logo: string;
+}
+
+interface SchoolHeaderProps {
+    readonly activeSchool: SchoolData;
+}
+
+export default function SchoolHeader(props: SchoolHeaderProps) {
     return (
         <div className="section-header" key="education-header">
             <img

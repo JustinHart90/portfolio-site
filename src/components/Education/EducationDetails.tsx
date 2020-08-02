@@ -4,7 +4,25 @@ import EducationNav from './EducationNav';
 import SchoolHeader from './SchoolHeader';
 import '../../styles/_section.scss';
 
-export default function EducationDetails(props) {
+interface SchoolData {
+    readonly name: string;
+    readonly longName: string;
+    readonly focus: string;
+    readonly showGpa: boolean;
+    readonly gpa: string;
+    readonly dates: string;
+    readonly websiteUrl: string;
+    readonly logo: string;
+}
+
+interface EducationDetailsProps {
+    readonly schoolNames: Array<string>;
+    readonly activeSchool: SchoolData;
+    readonly allSchools: Array<SchoolData>;
+    onChangeSchool(activeSchoolData: SchoolData) : void;
+}
+
+export default function EducationDetails(props: EducationDetailsProps) {
     return (
         <Card>
             <Card.Header>

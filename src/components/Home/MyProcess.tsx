@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { FaLightbulb, FaHammer, FaEdit } from 'react-icons/fa';
-import './Styles/_process.scss';
 
 export default function MyProcess() {
   return (

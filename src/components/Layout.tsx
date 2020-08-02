@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 import Nav from './Nav/Nav';
 import './Layout.scss';
 
-export default function Layout(props) {
+export default function Layout(props: any) {
   return (
     <div id="layout-container">
       <Nav />

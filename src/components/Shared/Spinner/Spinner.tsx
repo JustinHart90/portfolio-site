@@ -1,7 +1,11 @@
 import React from "react";
 import { css } from "@emotion/core";
 import BeatLoader from "react-spinners/BeatLoader";
- 
+
+interface SpinnerProps {
+    loading: boolean
+}
+
 // Can be a string as well. Need to ensure each key-value pair ends with ;
 const styleSpinner = css`
   display: block;
@@ -10,7 +14,7 @@ const styleSpinner = css`
   margin: 5rem;
 `;
  
-export default function Spinner(props) { 
+export default function Spinner(props: SpinnerProps) { 
     return (
         <div className="sweet-loading" style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <BeatLoader

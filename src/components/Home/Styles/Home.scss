@@ -1,10 +1,11 @@
 @import '../../../styles/include-media';
+@import './_about.scss';
 @import './_animations.scss';
-@import './_keyframes.scss';
-@import './_messageBlock.scss';
-@import './_logo.scss';
-@import './_footer.scss';
 @import './_contact.scss';
+@import './_footer.scss';
+@import './_keyframes.scss';
+@import './_logo.scss';
+@import './_messageBlock.scss';
 @import './_process.scss';
 
 
@@ -26,20 +27,17 @@ div#home-container {
 @include media(">=phone-sm", "<=phone-lg") {
     #landing {
         min-height: 70vh;
-        height: auto;
     }
 }
 
 @include media(">phone-lg", "<=tablet") {
     #landing {
         min-height: 80vh;
-        height: auto;
     }
 }
 
 @include media(">tablet", "<=desktop") {
     #landing {
         min-height: 85vh;
-        height: auto;
     }
 }

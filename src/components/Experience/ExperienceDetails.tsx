@@ -4,7 +4,29 @@ import ExperienceNav from './ExperienceNav';
 import CompanyHeader from './CompanyHeader';
 import '../../styles/_section.scss';
 
-export default function ExperienceDetails(props) {
+interface Role {
+    title: string;
+    description: Array<string>;
+    dates: string;
+}
+
+interface ActiveJob {
+    company: string;
+    titles: Array<string>;
+    websiteUrl: string;
+    logo: string;
+    roles: Array<Role>
+}
+
+interface ExperienceDetailsProps {
+    companyNames: Array<string>;
+    activeJob: ActiveJob;
+    allJobs: Array<ActiveJob>;
+
+    onChangeCompany(activeCompanyData: ActiveJob) : void;
+}
+
+export default function ExperienceDetails(props: ExperienceDetailsProps) {
     return (
         <Card>
             <Card.Header>
