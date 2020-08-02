@@ -3,7 +3,7 @@
         "id": "resume-image",
         "src": "images/icons/resume.png",
         "href": "./resume.pdf",
-        "tooltip": "Click to view/download",
+        "tooltip": "Click to view/download resume",
         "tooltipTitle": "Justin's Resume"
     },
     {
